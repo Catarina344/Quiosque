@@ -1,0 +1,349 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>A Shawarma | Sabor de outro nível</title>
+
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+
+<body>
+
+  <!-- CABEÇALHO -->
+  <header class="cabecalho">
+
+    <a href="index.html" class="logo">
+      <img src="Emblema Avengers Vermelho Escuro.png" alt="Logo A Shawarma">
+      <span>SHAWARMA</span>
+    </a>
+
+    <nav class="menu" id="menu">
+      <a href="index.html" class="ativo">Início</a>
+      <a href="cardapio.html">Cardápio</a>
+      <a href="cadastro.html">Cadastro</a>
+      <a href="pedidos.html">Pedidos</a>
+      <a href="perfil.html">Perfil</a>
+      
+    </nav>
+
+    <form class="busca" id="form-busca">
+      <input
+        type="search"
+        id="campo-busca"
+        placeholder="Buscar shawarma, sabores..."
+        aria-label="Buscar produtos"
+      >
+      <button type="submit" aria-label="Buscar">⌕</button>
+    </form>
+
+    <a href="carrinho.html" class="icone-carrinho" aria-label="Carrinho">
+      🛒 <span id="contador-carrinho">0</span>
+    </a>
+
+    <div class="botoes-login">
+      <a href="login.html">
+      <button class="botao botao-claro" id="abrir-login">
+        Entrar
+      </button></a>
+
+      <a href="cadastro.html" class="botao botao-vermelho">
+        Cadastrar
+      </a>
+    </div>
+
+    <button class="menu-mobile" id="botao-menu" aria-label="Abrir menu">
+      ☰
+    </button>
+
+  </header>
+
+  <main>
+
+    <!-- BANNER PRINCIPAL -->
+    
+<section class="banner-principal">
+
+  <div class="banner-conteudo">
+    <span class="banner-etiqueta">O SABOR QUE É UMA MISSÃO</span>
+
+    <h1>
+      O VERDADEIRO
+      <strong>SHAWARMA</strong>
+      <span>É UMA MISSÃO!</span>
+    </h1>
+
+    <p>
+      Sabor, qualidade e ingredientes especiais em cada mordida.
+      Com um verdadeiro herói!
+    </p>
+
+    <a href="cardapio.html" class="botao-banner">
+      Ver Cardápio <span>→</span>
+    </a>
+  </div>
+
+  <div class="banner-visual">
+    <div class="banner-circulo"></div>
+
+    <img
+      src="https://images.unsplash.com/photo-1529006557810-274b9b2fc783?auto=format&fit=crop&w=1000&q=85"
+      alt="Shawarma artesanal recheado"
+      class="banner-foto"
+    >
+
+    <img
+      src="Emblema Avengers Vermelho Escuro.png"
+      alt=""
+      class="banner-logo"
+    >
+  </div>
+
+</section>
+
+<section class="beneficios">
+  <div class="beneficio">
+    <span>♢</span>
+    <p>Ingredientes<br><strong>de qualidade</strong></p>
+  </div>
+
+  <div class="beneficio">
+    <span>◷</span>
+    <p>Entrega<br><strong>rápida</strong></p>
+  </div>
+
+  <div class="beneficio">
+    <span>♧</span>
+    <p>Diversos<br><strong>sabores</strong></p>
+  </div>
+
+  <div class="beneficio">
+    <span>▣</span>
+    <p>Pagamento<br><strong>seguro</strong></p>
+  </div>
+</section>
+
+
+      <!-- BENEFÍCIOS -->
+      <div class="beneficios">
+        <div class="beneficio">
+          <span class="beneficio-icone">♢</span>
+          <p>Ingredientes<br><strong>de qualidade</strong></p>
+        </div>
+
+        <div class="beneficio">
+          <span class="beneficio-icone">◷</span>
+          <p>Entrega<br><strong>rápida</strong></p>
+        </div>
+
+        <div class="beneficio">
+          <span class="beneficio-icone">♧</span>
+          <p>Diversos<br><strong>sabores</strong></p>
+        </div>
+
+        <div class="beneficio">
+          <span class="beneficio-icone">▣</span>
+          <p>Pagamento<br><strong>seguro</strong></p>
+        </div>
+      </div>
+
+    </section>
+
+
+
+    <!-- PRODUTOS EM DESTAQUE -->
+    <section class="secao-produtos" id="produtos">
+
+      <div class="titulo-secao">
+        <div>
+          <h2>Mais pedidos</h2>
+          <p>Os favoritos dos nossos clientes.</p>
+        </div>
+
+        <a href="cardapio.html">Ver todos →</a>
+      </div>
+
+      <div class="grade-produtos">
+
+        <article class="card-produto" data-nome="Shawarma Clássico">
+          <img
+            src="https://images.unsplash.com/photo-1529006557810-274b9b2fc783?auto=format&fit=crop&w=600&q=80"
+            alt="Shawarma clássico"
+          >
+
+          <div class="info-produto">
+            <h3>Shawarma Clássico</h3>
+            <p>Carne, salada e molho especial.</p>
+            <strong>R$ 24,90</strong>
+
+            <button
+              class="botao botao-vermelho adicionar"
+              data-nome="Shawarma Clássico"
+              data-preco="24.90"
+            >
+              🛒 Adicionar
+            </button>
+          </div>
+        </article>
+
+        <article class="card-produto" data-nome="Shawarma de Frango">
+          <img
+            src="https://images.unsplash.com/photo-1561651823-34feb02250e4?auto=format&fit=crop&w=600&q=80"
+            alt="Shawarma de frango"
+          >
+
+          <div class="info-produto">
+            <h3>Shawarma de Frango</h3>
+            <p>Frango temperado e vegetais frescos.</p>
+            <strong>R$ 22,90</strong>
+
+            <button
+              class="botao botao-vermelho adicionar"
+              data-nome="Shawarma de Frango"
+              data-preco="22.90"
+            >
+              🛒 Adicionar
+            </button>
+          </div>
+        </article>
+
+        <article class="card-produto" data-nome="Shawarma Especial">
+          <img
+            src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=80"
+            alt="Shawarma especial"
+          >
+
+          <div class="info-produto">
+            <h3>Shawarma Especial</h3>
+            <p>Uma combinação especial da casa.</p>
+            <strong>R$ 26,90</strong>
+
+            <button
+              class="botao botao-vermelho adicionar"
+              data-nome="Shawarma Especial"
+              data-preco="26.90"
+            >
+              🛒 Adicionar
+            </button>
+          </div>
+        </article>
+
+        <article class="card-produto" data-nome="Shawarma Vegetariano">
+          <img
+            src="https://images.unsplash.com/photo-1530469912745-a215c6b256ea?auto=format&fit=crop&w=600&q=80"
+            alt="Shawarma vegetariano"
+          >
+
+          <div class="info-produto">
+            <h3>Shawarma Vegetariano</h3>
+            <p>Vegetais frescos e molho da casa.</p>
+            <strong>R$ 19,90</strong>
+
+            <button
+              class="botao botao-vermelho adicionar"
+              data-nome="Shawarma Vegetariano"
+              data-preco="19.90"
+            >
+              🛒 Adicionar
+            </button>
+          </div>
+        </article>
+
+      </div>
+
+      <p class="mensagem-busca" id="mensagem-busca" role="status"></p>
+
+    </section>
+
+    <!-- CHAMADA FINAL -->
+    <section class="chamada-final">
+      <div>
+        <p>PREPARE-SE PARA O SABOR</p>
+        <h2>Seu próximo shawarma favorito está aqui.</h2>
+        <a href="cardapio.html" class="botao botao-branco">
+          Explorar cardápio →
+        </a>
+      </div>
+
+      <img src="Emblema Avengers Vermelho Escuro.png" alt="" aria-hidden="true">
+    </section>
+
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="rodape">
+
+    <div class="rodape-marca">
+      <a href="index.html" class="logo">
+        <img src="Emblema Avengers Vermelho Escuro.png" alt="Logo A Shawarma">
+        <span>SHAWARMA</span>
+      </a>
+      <p>Sabor de outro nível.</p>
+    </div>
+
+    <div class="rodape-coluna">
+      <h3>Links</h3>
+      <a href="index.html">Início</a>
+      <a href="cardapio.html">Cardápio</a>
+      <a href="cadastro.html">Cadastro</a>
+      <a href="pedidos.html">Pedidos</a>
+    </div>
+
+    <div class="rodape-coluna">
+      <h3>Ajuda</h3>
+      <a href="#">Política de privacidade</a>
+      <a href="#">Termos de uso</a>
+      <a href="#">Contato</a>
+    </div>
+
+    <div class="rodape-coluna">
+      <h3>Siga-nos</h3>
+      <p>Instagram · Facebook</p>
+      <p>YouTube · TikTok</p>
+    </div>
+
+    <div class="direitos">
+      © 2026 A Shawarma. Todos os direitos reservados.
+    </div>
+
+    <img
+      class="marca-dagua"
+      src="Emblema Avengers Vermelho Escuro.png"
+      alt=""
+      aria-hidden="true"
+    >
+
+  </footer>
+
+  <!-- POP-UP DE LOGIN -->
+  <div class="fundo-modal" id="modal-login">
+    <section class="modal-login" role="dialog" aria-modal="true" aria-labelledby="titulo-login">
+      <button class="fechar-modal" id="fechar-login" aria-label="Fechar">×</button>
+
+      <img src="img/logo-vingadores.png" alt="" class="logo-modal">
+
+      <h2 id="titulo-login">Bem-vindo de volta!</h2>
+      <p>Entre na sua conta A Shawarma.</p>
+
+      <form id="form-login">
+        <label for="email-login">E-mail</label>
+        <input id="email-login" type="email" placeholder="seu@email.com" required>
+
+        <label for="senha-login">Senha</label>
+        <input id="senha-login" type="password" placeholder="Sua senha" required>
+
+        <button class="botao botao-vermelho" type="submit">Entrar</button>
+      </form>
+
+      <p class="link-cadastro">
+        Ainda não tem conta?
+        <a href="cadastro.html">Cadastre-se</a>
+      </p>
+    </section>
+  </div>
+<script src="js/script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,471 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --vermelho: #e50920;
+  --vermelho-escuro: #b90019;
+  --preto: #101923;
+  --cinza: #697586;
+  --borda: #e2e6ec;
+  --fundo: #f5f6f8;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--fundo);
+  color: var(--preto);
+}
+
+/* CABEÇALHO */
+
+.cabecalho {
+  min-height: 70px;
+  padding: 10px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: white;
+  border-bottom: 1px solid var(--borda);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--preto);
+  text-decoration: none;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 22px;
+}
+
+.logo img {
+  width: 27px;
+  height: 27px;
+  object-fit: contain;
+}
+
+.navegacao {
+  display: flex;
+  gap: 22px;
+}
+
+.navegacao a {
+  color: #303946;
+  text-decoration: none;
+  font-size: 12px;
+  transition: .2s;
+}
+
+.navegacao a:hover {
+  color: var(--vermelho);
+}
+
+.acoes-cabecalho {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.botao-entrar,
+.botao-cadastrar {
+  padding: 11px 17px;
+  border-radius: 7px;
+  font-size: 11px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.botao-entrar {
+  color: var(--preto);
+  border: 1px solid var(--borda);
+  background: white;
+}
+
+.botao-cadastrar {
+  color: white;
+  background: var(--vermelho);
+}
+
+/* PÁGINA */
+
+.pagina-cadastro {
+  min-height: calc(100vh - 145px);
+  padding: 35px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* PAINEL PRINCIPAL */
+
+.painel-cadastro {
+  width: 100%;
+  max-width: 1000px;
+  min-height: 610px;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  background: white;
+  border: 1px solid var(--borda);
+  border-radius: 13px;
+  overflow: hidden;
+  box-shadow: 0 10px 35px #1019230c;
+}
+
+/* LADO ESQUERDO */
+
+.lado-esquerdo {
+  padding: 45px 38px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  color: white;
+  background: linear-gradient(145deg, #101923, #310711);
+}
+
+.lado-esquerdo::after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  right: -120px;
+  bottom: -120px;
+  border: 25px solid #ffffff0c;
+  border-radius: 50%;
+}
+
+.marca-grande {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 35px;
+}
+
+.marca-grande img {
+  width: 125px;
+  height: 125px;
+  object-fit: contain;
+  filter: drop-shadow(0 5px 12px #0008);
+}
+
+.etiqueta {
+  color: #ff6576;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.lado-esquerdo h1 {
+  margin: 13px 0;
+  font-family: 'Bebas Neue', Impact, sans-serif;
+  font-size: clamp(42px, 5vw, 62px);
+  line-height: .95;
+}
+
+.lado-esquerdo h1 span {
+  color: #ff263e;
+}
+
+.lado-esquerdo > p {
+  max-width: 340px;
+  color: #d6dce4;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.vantagens {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 30px;
+  color: #f4f4f4;
+  font-size: 11px;
+}
+
+/* FORMULÁRIO */
+
+.lado-formulario {
+  padding: 45px 55px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.titulo-formulario {
+  margin-bottom: 25px;
+}
+
+.titulo-formulario h2 {
+  margin: 8px 0;
+  font-size: 27px;
+  font-weight: 800;
+}
+
+.titulo-formulario p {
+  color: var(--cinza);
+  font-size: 12px;
+}
+
+/* CAMPOS */
+
+#form-cadastro {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.campo label {
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.campo input {
+  width: 100%;
+  height: 43px;
+  padding: 0 13px;
+  color: var(--preto);
+  background: #fff;
+  border: 1px solid var(--borda);
+  border-radius: 6px;
+  outline: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  transition: .2s;
+}
+
+.campo input:focus {
+  border-color: var(--vermelho);
+  box-shadow: 0 0 0 3px #e5092012;
+}
+
+.campo small {
+  color: var(--cinza);
+  font-size: 10px;
+}
+
+.campo-senha {
+  position: relative;
+}
+
+.campo-senha input {
+  padding-right: 70px;
+}
+
+.mostrar-senha {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  color: var(--vermelho);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+/* TERMOS */
+
+.termos {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  color: #596474;
+  font-size: 10px;
+  line-height: 1.6;
+  cursor: pointer;
+}
+
+.termos input {
+  margin-top: 2px;
+  accent-color: var(--vermelho);
+}
+
+/* MENSAGEM */
+
+.mensagem-cadastro {
+  min-height: 15px;
+  font-size: 11px;
+  color: var(--vermelho);
+}
+
+.mensagem-cadastro.sucesso {
+  color: #16834b;
+}
+
+/* BOTÃO */
+
+.botao-cadastrar-form {
+  width: 100%;
+  height: 46px;
+  color: white;
+  background: var(--vermelho);
+  border: none;
+  border-radius: 7px;
+  font-size: 11px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.botao-cadastrar-form:hover {
+  background: var(--vermelho-escuro);
+  transform: translateY(-2px);
+}
+
+/* LOGIN */
+
+.divisor {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 22px 0;
+  color: #9aa3af;
+  font-size: 10px;
+}
+
+.divisor::before,
+.divisor::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--borda);
+}
+
+.texto-login {
+  color: var(--cinza);
+  font-size: 11px;
+  text-align: center;
+}
+
+.texto-login a {
+  color: var(--vermelho);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+/* RODAPÉ */
+
+.rodape {
+  min-height: 85px;
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  color: white;
+  background: #101923;
+}
+
+.rodape-logo {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.rodape-logo img {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+}
+
+.rodape-logo strong {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 17px;
+}
+
+.rodape-logo p,
+.rodape > p,
+.rodape > a {
+  color: #c2c8d0;
+  font-size: 10px;
+}
+
+.rodape > a {
+  text-decoration: none;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 850px) {
+  .navegacao {
+    gap: 12px;
+  }
+
+  .painel-cadastro {
+    grid-template-columns: .8fr 1.2fr;
+  }
+
+  .lado-formulario {
+    padding: 35px 28px;
+  }
+
+  .lado-esquerdo {
+    padding: 35px 25px;
+  }
+}
+
+@media (max-width: 650px) {
+  .cabecalho {
+    flex-wrap: wrap;
+  }
+
+  .navegacao {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 8px 0;
+  }
+
+  .pagina-cadastro {
+    padding: 15px 10px;
+  }
+
+  .painel-cadastro {
+    grid-template-columns: 1fr;
+  }
+
+  .lado-esquerdo {
+    min-height: 270px;
+    padding: 25px;
+  }
+
+  .marca-grande {
+    margin-bottom: 15px;
+  }
+
+  .marca-grande img {
+    width: 75px;
+    height: 75px;
+  }
+
+  .lado-esquerdo h1 {
+    font-size: 43px;
+  }
+
+  .vantagens {
+    margin-top: 17px;
+  }
+
+  .lado-formulario {
+    padding: 30px 22px;
+  }
+
+  .rodape {
+    flex-direction: column;
+    text-align: center;
+  }
+}

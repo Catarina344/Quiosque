@@ -1,0 +1,622 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cardápio | A Shawarma</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="cardapio.css">
+  
+</head>
+
+<body>
+
+  <!-- CABEÇALHO -->
+  <header class="cabecalho">
+
+    <a href="index.html" class="logo">
+      <img src="Emblema Avengers Vermelho Escuro.png" alt="Logo A Shawarma">
+      <span>SHAWARMA</span>
+    </a>
+
+    <nav class="menu" id="menu">
+      <a href="index.html">Início</a>
+      <a href="cardapio.html" class="ativo">Cardápio</a>
+      <a href="cadastro.html">Cadastro</a>
+      <a href="pedidos.html">Pedidos</a>
+      <a href="perfil.html">Perfil</a>
+    </nav>
+
+    <form class="busca" id="form-busca">
+      <input
+        type="search"
+        id="campo-busca"
+        placeholder="Buscar no cardápio..."
+        aria-label="Buscar no cardápio"
+      >
+      <button type="submit" aria-label="Buscar">⌕</button>
+    </form>
+
+    <a href="#carrinho" class="icone-carrinho" aria-label="Carrinho">
+      🛒 <span id="contador-carrinho">0</span>
+    </a>
+
+    <div class="botoes-login">
+      <a href="cadastro.html" class="botao botao-claro">Entrar</a>
+      <a href="cadastro.html" class="botao botao-vermelho">Cadastrar</a>
+    </div>
+
+    <button class="menu-mobile" id="botao-menu" aria-label="Abrir menu">
+      ☰
+    </button>
+
+  </header>
+
+  <main>
+
+    <!-- CAPA DO CARDÁPIO -->
+    <section class="capa-cardapio">
+
+      <div class="capa-texto">
+        <span class="capa-etiqueta">A SHAWARMA APRESENTA</span>
+
+        <h1>
+          NOSSO
+          <span>CARDÁPIO</span>
+        </h1>
+
+        <p>
+          Escolha sua missão de sabor.
+          Temos opções especiais preparadas para você!
+        </p>
+      </div>
+
+      <img
+        src="Emblema Avengers Vermelho Escuro.png"
+        alt=""
+        class="capa-logo"
+      >
+
+    </section>
+
+    <!-- CATEGORIAS -->
+    <section class="categorias-cardapio">
+
+      <h2>Explore nossas categorias</h2>
+
+      <div class="lista-categorias">
+
+        <button class="categoria ativo" data-categoria="todos">
+          <span>🍽️</span>
+          Todos
+        </button>
+
+        <button class="categoria" data-categoria="classicos">
+          <span>🌯</span>
+          Clássicos
+        </button>
+
+        <button class="categoria" data-categoria="frango">
+          <span>🍗</span>
+          Frango
+        </button>
+
+        <button class="categoria" data-categoria="carne">
+          <span>🥩</span>
+          Carne
+        </button>
+
+        <button class="categoria" data-categoria="vegetariano">
+          <span>🥬</span>
+          Vegetarianos
+        </button>
+
+        <button class="categoria" data-categoria="bebidas">
+          <span>🥤</span>
+          Bebidas
+        </button>
+
+        <button class="categoria" data-categoria="acompanhamentos">
+          <span>🍟</span>
+          Acompanhamentos
+        </button>
+
+      </div>
+
+    </section>
+
+    <!-- FILTROS E PRODUTOS -->
+    <section class="area-cardapio">
+
+      <div class="titulo-cardapio">
+        <div>
+          <span class="subtitulo-cardapio">FEITO PARA VOCÊ</span>
+          <h2>Escolha seu favorito</h2>
+        </div>
+
+        <select id="ordenar-produtos" aria-label="Ordenar produtos">
+          <option value="padrao">Mais populares</option>
+          <option value="menor">Menor preço</option>
+          <option value="maior">Maior preço</option>
+          <option value="nome">Ordem alfabética</option>
+        </select>
+      </div>
+
+      <div class="grade-cardapio" id="grade-cardapio">
+
+        <!-- SHAWARMA CLÁSSICO -->
+        <article class="item-cardapio"
+          data-categoria="classicos carne"
+          data-nome="Shawarma Clássico"
+          data-preco="24.90"
+          data-popularidade="1">
+
+          <div class="imagem-produto">
+            <img
+              src="https://images.unsplash.com/photo-1529006557810-274b9b2fc783?auto=format&fit=crop&w=600&q=85"
+              alt="Shawarma clássico"
+            >
+            <span class="selo-produto">MAIS VENDIDO</span>
+          </div>
+
+          <div class="conteudo-cardapio">
+            <span class="categoria-produto">CLÁSSICOS</span>
+            <h3>Shawarma Clássico</h3>
+            <p>Carne, alface, tomate e molho especial da casa.</p>
+
+            <div class="preco-adicionar">
+              <strong>R$ 24,90</strong>
+              <button class="botao botao-vermelho adicionar"
+                data-nome="Shawarma Clássico" data-preco="24.90">
+                + Adicionar
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- SHAWARMA DE FRANGO -->
+        <article class="item-cardapio"
+          data-categoria="frango"
+          data-nome="Shawarma de Frango"
+          data-preco="22.90"
+          data-popularidade="2">
+
+          <div class="imagem-produto">
+            <img
+              src="https://images.unsplash.com/photo-1561651823-34feb02250e4?auto=format&fit=crop&w=600&q=85"
+              alt="Shawarma de frango"
+            >
+            <span class="selo-produto selo-diferente">FAVORITO</span>
+          </div>
+
+          <div class="conteudo-cardapio">
+            <span class="categoria-produto">FRANGO</span>
+            <h3>Shawarma de Frango</h3>
+            <p>Frango grelhado, vegetais frescos e molho cremoso.</p>
+
+            <div class="preco-adicionar">
+              <strong>R$ 22,90</strong>
+              <button class="botao botao-vermelho adicionar"
+                data-nome="Shawarma de Frango" data-preco="22.90">
+                + Adicionar
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- SHAWARMA ESPECIAL -->
+        <article class="item-cardapio"
+          data-categoria="classicos carne"
+          data-nome="Shawarma Especial"
+          data-preco="29.90"
+          data-popularidade="3">
+
+          <div class="imagem-produto">
+            <img
+              src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=85"
+              alt="Shawarma especial"
+            >
+            <span class="selo-produto selo-diferente">ESPECIAL</span>
+          </div>
+
+          <div class="conteudo-cardapio">
+            <span class="categoria-produto">ESPECIAIS</span>
+            <h3>Shawarma Especial</h3>
+            <p>Carne selecionada, queijo e molho exclusivo.</p>
+
+            <div class="preco-adicionar">
+              <strong>R$ 29,90</strong>
+              <button class="botao botao-vermelho adicionar"
+                data-nome="Shawarma Especial" data-preco="29.90">
+                + Adicionar
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- VEGETARIANO -->
+        <article class="item-cardapio"
+          data-categoria="vegetariano"
+          data-nome="Shawarma Vegetariano"
+          data-preco="19.90"
+          data-popularidade="4">
+
+          <div class="imagem-produto">
+            <img
+              src="https://images.unsplash.com/photo-1530469912745-a215c6b256ea?auto=format&fit=crop&w=600&q=85"
+              alt="Shawarma vegetariano"
+            >
+          </div>
+
+          <div class="conteudo-cardapio">
+            <span class="categoria-produto">VEGETARIANOS</span>
+            <h3>Shawarma Vegetariano</h3>
+            <p>Vegetais grelhados, salada e molho especial.</p>
+
+            <div class="preco-adicionar">
+              <strong>R$ 19,90</strong>
+              <button class="botao botao-vermelho adicionar"
+                data-nome="Shawarma Vegetariano" data-preco="19.90">
+                + Adicionar
+              </button>
+            </div>
+          </div>
+        </article>
+        
+<!-- SHAWARMA CHEDDAR -->
+<article class="item-cardapio"
+  data-categoria="carne classicos"
+  data-nome="Shawarma Cheddar"
+  data-preco="28.90"
+  data-popularidade="21">
+
+  <div class="imagem-produto">
+    <img src="https://images.unsplash.com/photo-1529006557810-274b9b2fc783?auto=format&fit=crop&w=600&q=85" alt="Shawarma cheddar">
+  </div>
+
+  <div class="conteudo-cardapio">
+    <span class="categoria-produto">ESPECIAL</span>
+    <h3>Shawarma Cheddar</h3>
+    <p>Carne temperada, cheddar cremoso, alface e tomate.</p>
+    <div class="preco-adicionar">
+      <strong>R$ 28,90</strong>
+      <button class="botao botao-vermelho adicionar" data-nome="Shawarma Cheddar" data-preco="28.90">+ Adicionar</button>
+    </div>
+  </div>
+</article>
+
+<!-- SHAWARMA BARBECUE -->
+<article class="item-cardapio"
+  data-categoria="carne especiais"
+  data-nome="Shawarma Barbecue"
+  data-preco="29.90"
+  data-popularidade="22">
+
+  <div class="imagem-produto">
+    <img src="https://images.unsplash.com/photo-1561651823-34feb02250e4?auto=format&fit=crop&w=600&q=85" alt="Shawarma barbecue">
+  </div>
+
+  <div class="conteudo-cardapio">
+    <span class="categoria-produto">ESPECIAL</span>
+    <h3>Shawarma Barbecue</h3>
+    <p>Carne grelhada, molho barbecue, queijo e cebola.</p>
+    <div class="preco-adicionar">
+      <strong>R$ 29,90</strong>
+      <button class="botao botao-vermelho adicionar" data-nome="Shawarma Barbecue" data-preco="29.90">+ Adicionar</button>
+    </div>
+  </div>
+</article>
+
+<!-- SHAWARMA DUPLO -->
+<article class="item-cardapio"
+  data-categoria="carne classicos"
+  data-nome="Shawarma Duplo"
+  data-preco="34.90"
+  data-popularidade="23">
+
+  <div class="imagem-produto">
+    <img src="https://images.unsplash.com/photo-1529006557810-274b9b2fc783?auto=format&fit=crop&w=600&q=85" alt="Shawarma duplo">
+  </div>
+
+  <div class="conteudo-cardapio">
+    <span class="categoria-produto">MAIS RECHEIO</span>
+    <h3>Shawarma Duplo</h3>
+    <p>Porção generosa de carne, queijo e molho especial.</p>
+    <div class="preco-adicionar">
+      <strong>R$ 34,90</strong>
+      <button class="botao botao-vermelho adicionar" data-nome="Shawarma Duplo" data-preco="34.90">+ Adicionar</button>
+    </div>
+  </div>
+</article>
+
+<!-- SHAWARMA DE KAFTA -->
+<article class="item-cardapio"
+  data-categoria="carne"
+  data-nome="Shawarma de Kafta"
+  data-preco="27.90"
+  data-popularidade="24">
+
+  <div class="imagem-produto">
+    <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=85" alt="Shawarma de kafta">
+  </div>
+
+  <div class="conteudo-cardapio">
+    <span class="categoria-produto">CARNE</span>
+    <h3>Shawarma de Kafta</h3>
+    <p>Kafta temperada, salada fresca e molho de alho.</p>
+    <div class="preco-adicionar">
+      <strong>R$ 27,90</strong>
+      <button class="botao botao-vermelho adicionar" data-nome="Shawarma de Kafta" data-preco="27.90">+ Adicionar</button>
+    </div>
+  </div>
+</article>
+
+<!-- SHAWARMA DE FRANGO COM CHEDDAR -->
+<article class="item-cardapio"
+  data-categoria="frango"
+  data-nome="Shawarma de Frango com Cheddar"
+  data-preco="27.90"
+  data-popularidade="25">
+
+  <div class="imagem-produto">
+    <img src="https://images.unsplash.com/photo-1606755962773-d324e0a13086?auto=format&fit=crop&w=600&q=85" alt="Shawarma de frango com cheddar">
+  </div>
+
+  <div class="conteudo-cardapio">
+    <span class="categoria-produto">FRANGO</span>
+    <h3>Frango com Cheddar</h3>
+    <p>Frango grelhado, cheddar, alface e molho especial.</p>
+    <div class="preco-adicionar">
+      <strong>R$ 27,90</strong>
+      <button class="botao botao-vermelho adicionar" data-nome="Shawarma de Frango com Cheddar" data-preco="27.90">+ Adicionar</button>
+    </div>
+  </div>
+</article>
+
+<!-- SHAWARMA MIX -->
+<article class="item-cardapio"
+  data-categoria="carne frango especiais"
+  data-nome="Shawarma Mix"
+  data-preco="32.90"
+  data-popularidade="26">
+
+  <div class="imagem-produto">
+    <img src="https://images.unsplash.com/photo-1529006557810-274b9b2fc783?auto=format&fit=crop&w=600&q=85" alt="Shawarma mix">
+  </div>
+
+  <div class="conteudo-cardapio">
+    <span class="categoria-produto">ESPECIAL</span>
+    <h3>Shawarma Mix</h3>
+    <p>Combinação de carne e frango com queijo e salada.</p>
+    <div class="preco-adicionar">
+      <strong>R$ 32,90</strong>
+      <button class="botao botao-vermelho adicionar" data-nome="Shawarma Mix" data-preco="32.90">+ Adicionar</button>
+    </div>
+  </div>
+</article>
+
+
+        <!-- BATATA -->
+        <article class="item-cardapio"
+          data-categoria="acompanhamentos"
+          data-nome="Batata Frita"
+          data-preco="12.90"
+          data-popularidade="5">
+
+          <div class="imagem-produto">
+            <img
+              src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=600&q=85"
+              alt="Batata frita"
+            >
+          </div>
+
+          <div class="conteudo-cardapio">
+            <span class="categoria-produto">ACOMPANHAMENTOS</span>
+            <h3>Batata Frita</h3>
+            <p>Batatas crocantes e douradas.</p>
+
+            <div class="preco-adicionar">
+              <strong>R$ 12,90</strong>
+              <button class="botao botao-vermelho adicionar"
+                data-nome="Batata Frita" data-preco="12.90">
+                + Adicionar
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- REFRIGERANTE -->
+        <article class="item-cardapio"
+          data-categoria="bebidas"
+          data-nome="Refrigerante Lata"
+          data-preco="6.90"
+          data-popularidade="6">
+
+          <div class="imagem-produto">
+            <img
+              src="https://images.unsplash.com/photo-1629203851122-3726ecdf080e?auto=format&fit=crop&w=600&q=85"
+              alt="Refrigerante gelado"
+            >
+          </div>
+
+          <div class="conteudo-cardapio">
+            <span class="categoria-produto">BEBIDAS</span>
+            <h3>Refrigerante Lata</h3>
+            <p>Bebida gelada para acompanhar seu pedido.</p>
+
+            <div class="preco-adicionar">
+              <strong>R$ 6,90</strong>
+              <button class="botao botao-vermelho adicionar"
+                data-nome="Refrigerante Lata" data-preco="6.90">
+                + Adicionar
+              </button>
+            </div>
+          </div>
+        </article>
+        
+<!-- COCA-COLA LATA -->
+<article class="item-cardapio"
+  data-categoria="bebidas"
+  data-nome="Coca-Cola Lata 350ml"
+  data-preco="6.90"
+  data-popularidade="27">
+
+  <div class="imagem-produto">
+    <img src="https://images.unsplash.com/photo-1554866585-cd94860890b7?auto=format&fit=crop&w=600&q=85" alt="Coca-Cola lata">
+  </div>
+
+  <div class="conteudo-cardapio">
+    <span class="categoria-produto">BEBIDAS</span>
+    <h3>Coca-Cola Lata 350ml</h3>
+    <p>Coca-Cola tradicional, geladinha.</p>
+    <div class="preco-adicionar">
+      <strong>R$ 6,90</strong>
+      <button class="botao botao-vermelho adicionar" data-nome="Coca-Cola Lata 350ml" data-preco="6.90">+ Adicionar</button>
+    </div>
+  </div>
+</article>
+
+<!-- COCA-COLA ZERO -->
+<article class="item-cardapio"
+  data-categoria="bebidas"
+  data-nome="Coca-Cola Zero 350ml"
+  data-preco="6.90"
+  data-popularidade="28">
+
+  <div class="imagem-produto">
+    <img src="https://images.unsplash.com/photo-1554866585-cd94860890b7?auto=format&fit=crop&w=600&q=85" alt="Coca-Cola Zero">
+  </div>
+
+  <div class="conteudo-cardapio">
+    <span class="categoria-produto">BEBIDAS</span>
+    <h3>Coca-Cola Zero 350ml</h3>
+    <p>Coca-Cola Zero açúcar, bem gelada.</p>
+    <div class="preco-adicionar">
+      <strong>R$ 6,90</strong>
+      <button class="botao botao-vermelho adicionar" data-nome="Coca-Cola Zero 350ml" data-preco="6.90">+ Adicionar</button>
+    </div>
+  </div>
+</article>
+
+<!-- COCA-COLA 600ML -->
+<article class="item-cardapio"
+  data-categoria="bebidas"
+  data-nome="Coca-Cola 600ml"
+  data-preco="9.90"
+  data-popularidade="29">
+
+  <div class="imagem-produto">
+    <img src="https://images.unsplash.com/photo-1554866585-cd94860890b7?auto=format&fit=crop&w=600&q=85" alt="Coca-Cola garrafa">
+  </div>
+
+  <div class="conteudo-cardapio">
+    <span class="categoria-produto">BEBIDAS</span>
+    <h3>Coca-Cola 600ml</h3>
+    <p>Garrafa de Coca-Cola para acompanhar seu shawarma.</p>
+    <div class="preco-adicionar">
+      <strong>R$ 9,90</strong>
+      <button class="botao botao-vermelho adicionar" data-nome="Coca-Cola 600ml" data-preco="9.90">+ Adicionar</button>
+    </div>
+  </div>
+</article>
+
+
+        <!-- ÁGUA -->
+        <article class="item-cardapio"
+          data-categoria="bebidas"
+          data-nome="Água Mineral"
+          data-preco="4.00"
+          data-popularidade="7">
+
+          <div class="imagem-produto">
+            <img
+              src="https://images.unsplash.com/photo-1559839914-17aae19cec71?auto=format&fit=crop&w=600&q=85"
+              alt="Água mineral"
+            >
+          </div>
+
+          <div class="conteudo-cardapio">
+            <span class="categoria-produto">BEBIDAS</span>
+            <h3>Água Mineral</h3>
+            <p>Água mineral para refrescar seu dia.</p>
+
+            <div class="preco-adicionar">
+              <strong>R$ 4,00</strong>
+              <button class="botao botao-vermelho adicionar"
+                data-nome="Água Mineral" data-preco="4.00">
+                + Adicionar
+              </button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <p id="mensagem-cardapio" class="mensagem-cardapio" role="status"></p>
+
+    </section>
+
+    <!-- CARRINHO -->
+    <section class="carrinho-cardapio" id="carrinho">
+      <div class="titulo-carrinho">
+        <h2>🛒 Meu carrinho</h2>
+        <span id="quantidade-carrinho">0 itens</span>
+      </div>
+
+      <div id="itens-carrinho">
+        <p class="carrinho-vazio">Seu carrinho está vazio.</p>
+      </div>
+
+      <div class="rodape-carrinho">
+        <strong>Total: <span id="total-carrinho">R$ 0,00</span></strong>
+        <button class="botao botao-vermelho" id="finalizar-compra">
+          Finalizar pedido →
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="rodape">
+
+    <div class="rodape-marca">
+      <a href="index.html" class="logo">
+        <img src="Emblema Avengers Vermelho Escuro.png" alt="Logo A Shawarma">
+        <span>SHAWARMA</span>
+      </a>
+      <p>Sabor de outro nível.</p>
+    </div>
+
+    <div class="rodape-coluna">
+      <h3>Links</h3>
+      <a href="index.html">Início</a>
+      <a href="cardapio.html">Cardápio</a>
+      <a href="pedidos.html">Pedidos</a>
+    </div>
+
+    <div class="rodape-coluna">
+      <h3>Ajuda</h3>
+      <a href="#">Contato</a>
+      <a href="#">Política de privacidade</a>
+      <a href="#">Termos de uso</a>
+    </div>
+
+    <div class="rodape-coluna">
+      <h3>Conta</h3>
+      <a href="perfil.html">Meu perfil</a>
+      <a href="cadastro.html">Cadastrar</a>
+    </div>
+
+    <div class="direitos">
+      © 2026 A Shawarma. 
+    </div>
+
+    <img src="Emblema Avengers Vermelho Escuro.png" class="marca-dagua" alt="">
+
+  </footer>
+<script src="cardapio.js" defer></script>
+</body>
+</html>

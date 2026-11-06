@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Meu Carrinho | A Shawarma</title>
+
+    <link rel="stylesheet" href="carrinho.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="cabecalho">
+
+        <a href="index.html" class="logo">
+            <img src="Emblema Avengers Vermelho Escuro.png" alt="Logo A Shawarma">
+            <span>A SHAWARMA</span>
+        </a>
+
+        <nav class="menu">
+            <a href="index.html">Início</a>
+            <a href="cardapio.html">Cardápio</a>
+            <a href="pedidos.html">Meus pedidos</a>
+            <a href="perfil.html">Meu perfil</a>
+        </nav>
+
+        <a href="carrinho.html" class="botao-carrinho ativo">
+            🛒 Meu carrinho
+        </a>
+
+    </header>
+
+    <main class="conteudo">
+
+        <section class="titulo-pagina">
+            <p class="subtitulo">SEU PEDIDO</p>
+            <h1>MEU CARRINHO</h1>
+            <p>Confira seus produtos antes de finalizar a compra.</p>
+        </section>
+
+        <div class="carrinho-layout">
+
+            <section class="produtos-carrinho">
+
+                <div class="titulo-secao">
+                    <h2>Seus produtos</h2>
+                    <span id="quantidade-itens">0 itens</span>
+                </div>
+
+                <div id="lista-carrinho"></div>
+
+                <div id="carrinho-vazio" class="carrinho-vazio">
+                    <div class="icone-vazio">🛒</div>
+                    <h2>Seu carrinho está vazio!</h2>
+                    <p>Que tal escolher um shawarma delicioso?</p>
+                    <a href="cardapio.html" class="botao-voltar">
+                        Explorar cardápio
+                    </a>
+                </div>
+
+                <a href="cardapio.html" class="continuar-comprando">
+                    ← Continuar comprando
+                </a>
+
+            </section>
+
+            <aside class="resumo-pedido">
+
+                <h2>Resumo do pedido</h2>
+
+                <div class="linha-resumo">
+                    <span>Subtotal</span>
+                    <strong id="subtotal">R$ 0,00</strong>
+                </div>
+
+                <div class="linha-resumo">
+                    <span>Entrega</span>
+                    <strong id="entrega">R$ 0,00</strong>
+                </div>
+
+                <div class="divisor"></div>
+
+                <div class="linha-total">
+                    <span>Total</span>
+                    <strong id="total">R$ 0,00</strong>
+                </div>
+
+                <button id="finalizar-compra" class="botao-finalizar">
+                    FINALIZAR COMPRA
+                </button>
+
+                <p class="aviso">
+                    🔒 Seus dados são tratados com segurança.
+                </p>
+
+                <div class="formas-pagamento">
+                    <p>Formas de pagamento</p>
+                    <div>
+                        <span>PIX</span>
+                        <span>Cartão</span>
+                        <span>Dinheiro</span>
+                    </div>
+                </div>
+
+            </aside>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <p>© 2026 A Shawarma.</p>
+    </footer>
+
+    <script src="carrinho.js"></script>
+
+</body>
+</html>

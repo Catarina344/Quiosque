@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meus Pedidos | A Shawarma</title>
+
+  <link rel="stylesheet" href="pedidos.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- CABEÇALHO -->
+  <header class="cabecalho">
+    <a href="index.html" class="logo">
+      <img src="Emblema Avengers Vermelho Escuro.png" alt="Logo A Shawarma">
+      <span>A SHAWARMA</span>
+    </a>
+
+    <nav class="navegacao">
+      <a href="index.html">Início</a>
+      <a href="cardapio.html">Cardápio</a>
+      <a href="cadastro.html">Cadastro</a>
+      <a href="pedidos.html" class="ativo">Pedidos</a>
+      <a href="perfil.html">Perfil</a>
+    </nav>
+
+    <div class="acoes-cabecalho">
+      <a href="cadastro.html" class="botao-cadastrar">Minha conta</a>
+    </div>
+  </header>
+
+  <main class="pagina-pedidos">
+
+    <!-- TÍTULO -->
+    <section class="titulo-pagina">
+      <div>
+        <span class="etiqueta">SUA JORNADA DE SABOR</span>
+        <h1>MEUS <span>PEDIDOS</span></h1>
+        <p>Acompanhe seus pedidos e veja tudo o que você já pediu.</p>
+      </div>
+
+      <a href="cardapio.html" class="botao-pedir">
+        + Fazer pedido
+      </a>
+    </section>
+
+    <!-- RESUMO -->
+    <section class="resumo-pedidos">
+      <article class="resumo-card">
+        <div class="icone-resumo vermelho">📦</div>
+        <div>
+          <span>Total de pedidos</span>
+          <strong id="total-pedidos">0</strong>
+        </div>
+      </article>
+
+      <article class="resumo-card">
+        <div class="icone-resumo laranja">🛵</div>
+        <div>
+          <span>Em andamento</span>
+          <strong id="pedidos-andamento">0</strong>
+        </div>
+      </article>
+
+      <article class="resumo-card">
+        <div class="icone-resumo verde">✓</div>
+        <div>
+          <span>Entregues</span>
+          <strong id="pedidos-entregues">0</strong>
+        </div>
+      </article>
+    </section>
+
+    <!-- FILTROS -->
+    <section class="area-historico">
+
+      <div class="cabecalho-historico">
+        <div>
+          <h2>Histórico de pedidos</h2>
+          <p>Confira os detalhes das suas compras.</p>
+        </div>
+
+        <select id="filtro-pedidos">
+          <option value="todos">Todos os pedidos</option>
+          <option value="preparando">Preparando</option>
+          <option value="transporte">Saiu para entrega</option>
+          <option value="entregue">Entregues</option>
+          <option value="cancelado">Cancelados</option>
+        </select>
+      </div>
+
+      <div id="lista-pedidos" class="lista-pedidos">
+        <!-- Os pedidos serão inseridos pelo JavaScript -->
+      </div>
+
+      <div id="sem-pedidos" class="sem-pedidos" hidden>
+        <div class="icone-vazio">🛍️</div>
+        <h3>Nenhum pedido encontrado</h3>
+        <p>Quando você fizer seu primeiro pedido, ele aparecerá aqui.</p>
+        <a href="cardapio.html" class="botao-pedir">Explorar cardápio</a>
+      </div>
+
+    </section>
+
+    <!-- DETALHES DO PEDIDO -->
+    <div class="modal-fundo" id="modal-pedido" hidden>
+      <section class="modal-conteudo" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
+        <button class="fechar-modal" id="fechar-modal" aria-label="Fechar">×</button>
+        <span class="etiqueta">DETALHES DA COMPRA</span>
+        <h2 id="modal-titulo">Pedido</h2>
+        <div id="detalhes-pedido"></div>
+      </section>
+    </div>
+
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="rodape">
+    <div class="rodape-logo">
+      <img src="Emblema Avengers Vermelho Escuro.png" alt="Logo A Shawarma">
+      <div>
+        <strong>A SHAWARMA</strong>
+        <p>Sabor de outro nível.</p>
+      </div>
+    </div>
+
+    <p>© 2026 A Shawarma.</p>
+
+    <a href="index.html">Voltar ao início</a>
+  </footer>
+
+  <script src="pedidos.js"></script>
+</body>
+</html>

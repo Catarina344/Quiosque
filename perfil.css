@@ -1,0 +1,383 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #f7f7f7;
+    color: #101923;
+}
+
+/* CABEÇALHO */
+
+.cabecalho {
+    width: 100%;
+    min-height: 85px;
+    padding: 15px 7%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #101923;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 27px;
+}
+
+.logo img {
+    width: 43px;
+    height: 43px;
+    object-fit: contain;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #555;
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.menu a:hover,
+.menu a.ativo {
+    color: #e50920;
+}
+
+.botao-conta {
+    background: #e50920;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 7px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* CONTEÚDO */
+
+.conteudo {
+    width: 86%;
+    max-width: 1200px;
+    margin: 55px auto 75px;
+}
+
+.titulo-pagina {
+    margin-bottom: 35px;
+}
+
+.subtitulo {
+    color: #e50920;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 7px;
+}
+
+.titulo-pagina h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 55px;
+    letter-spacing: 1px;
+}
+
+.titulo-pagina > p:last-child {
+    color: #777;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* GRID PRINCIPAL */
+
+.perfil-container {
+    display: grid;
+    grid-template-columns: 290px 1fr;
+    gap: 25px;
+    align-items: start;
+}
+
+/* CARTÃO LATERAL */
+
+.cartao-perfil {
+    background: white;
+    padding: 30px 23px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+    text-align: center;
+}
+
+.avatar {
+    width: 95px;
+    height: 95px;
+    background: #e50920;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 45px;
+}
+
+.cartao-perfil h2 {
+    font-size: 19px;
+    margin-bottom: 6px;
+}
+
+.cartao-perfil > p {
+    color: #888;
+    font-size: 12px;
+    overflow-wrap: anywhere;
+}
+
+.linha-perfil {
+    height: 1px;
+    background: #eee;
+    margin: 25px 0;
+}
+
+.link-perfil {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 13px;
+    margin-bottom: 7px;
+    border-radius: 7px;
+    text-decoration: none;
+    color: #555;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: left;
+}
+
+.link-perfil:hover,
+.link-perfil.ativo {
+    background: #fff0f1;
+    color: #e50920;
+}
+
+.botao-sair {
+    width: 100%;
+    margin-top: 20px;
+    padding: 13px;
+    border: 1px solid #e50920;
+    border-radius: 7px;
+    background: white;
+    color: #e50920;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.botao-sair:hover {
+    background: #e50920;
+    color: white;
+}
+
+/* DADOS PESSOAIS */
+
+.cartao-dados {
+    background: white;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+}
+
+.cabecalho-dados {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+}
+
+.cabecalho-dados h2 {
+    font-size: 19px;
+    margin-bottom: 7px;
+}
+
+.cabecalho-dados p {
+    color: #888;
+    font-size: 12px;
+}
+
+.icone-editar {
+    width: 40px;
+    height: 40px;
+    background: #fff0f1;
+    color: #e50920;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+
+#form-perfil {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.campo label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #333;
+}
+
+.campo input {
+    width: 100%;
+    height: 47px;
+    border: 1px solid #e3e3e3;
+    border-radius: 7px;
+    padding: 0 14px;
+    outline: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.campo input:focus {
+    border-color: #e50920;
+    box-shadow: 0 0 0 3px rgba(229,9,32,0.08);
+}
+
+.divisor {
+    grid-column: 1 / -1;
+    height: 1px;
+    background: #eee;
+    margin: 10px 0;
+}
+
+.senha-titulo {
+    grid-column: 1 / -1;
+    margin: 0;
+}
+
+.mensagem {
+    grid-column: 1 / -1;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.botoes {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.botoes button {
+    padding: 13px 22px;
+    border-radius: 7px;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.botao-cancelar {
+    background: white;
+    border: 1px solid #ddd;
+    color: #555;
+}
+
+.botao-cancelar:hover {
+    background: #f3f3f3;
+}
+
+.botao-salvar {
+    background: #e50920;
+    border: 1px solid #e50920;
+    color: white;
+}
+
+.botao-salvar:hover {
+    background: #b90019;
+}
+
+/* RODAPÉ */
+
+footer {
+    background: #101923;
+    color: #aaa;
+    padding: 25px;
+    text-align: center;
+    font-size: 12px;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 850px) {
+    .cabecalho {
+        flex-wrap: wrap;
+    }
+
+    .menu {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .perfil-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 550px) {
+    .conteudo {
+        width: 92%;
+        margin-top: 35px;
+    }
+
+    .titulo-pagina h1 {
+        font-size: 43px;
+    }
+
+    .cartao-dados {
+        padding: 22px 17px;
+    }
+
+    #form-perfil {
+        grid-template-columns: 1fr;
+    }
+
+    .divisor,
+    .senha-titulo,
+    .mensagem,
+    .botoes {
+        grid-column: 1;
+    }
+
+    .botoes {
+        flex-direction: column-reverse;
+    }
+
+    .botoes button {
+        width: 100%;
+    }
+}

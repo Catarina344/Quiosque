@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro | A Shawarma</title>
+
+  <link rel="stylesheet" href="cadastro.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- CABEÇALHO -->
+  <header class="cabecalho">
+    <a href="index.html" class="logo">
+      <img src="Emblema Avengers Vermelho Escuro.png" alt="Logo A Shawarma">
+      <span>SHAWARMA</span>
+    </a>
+
+    <nav class="navegacao">
+      <a href="index.html">Início</a>
+      <a href="cardapio.html">Cardápio</a>
+      <a href="pedidos.html">Pedidos</a>
+      <a href="perfil.html">Perfil</a>
+    </nav>
+
+    <div class="acoes-cabecalho">
+      <a href="login.html" class="botao-entrar">Entrar</a>
+      <a href="cadastro.html" class="botao-cadastrar">Cadastrar</a>
+    </div>
+  </header>
+
+  <!-- CONTEÚDO -->
+  <main class="pagina-cadastro">
+
+    <section class="painel-cadastro">
+
+      <!-- LADO ESQUERDO -->
+      <div class="lado-esquerdo">
+        <div class="marca-grande">
+          <img src="Emblema Avengers Vermelho Escuro.png" alt="Símbolo A">
+        </div>
+
+        <span class="etiqueta">FAÇA PARTE DA EQUIPE</span>
+
+        <h1>SEU SABOR.<br>
+          SUA <span>MISSÃO.</span>
+        </h1>
+
+        <p>
+          Crie sua conta e aproveite todas as novidades,
+          ofertas especiais e os melhores shawarmas.
+        </p>
+
+        <div class="vantagens">
+          <div>✓ Acompanhe seus pedidos</div>
+          <div>✓ Salve seus produtos favoritos</div>
+          <div>✓ Receba ofertas exclusivas</div>
+        </div>
+      </div>
+
+      <!-- LADO DIREITO -->
+      <div class="lado-formulario">
+
+        <div class="titulo-formulario">
+          <span class="etiqueta">CADASTRO</span>
+          <h2>Crie sua conta</h2>
+          <p>Preencha seus dados para começar.</p>
+        </div>
+
+        <form id="form-cadastro">
+
+          <div class="campo">
+            <label for="nome">Nome completo</label>
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              placeholder="Digite seu nome completo"
+              autocomplete="name"
+              required
+            >
+          </div>
+
+          <div class="campo">
+            <label for="email">E-mail</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="exemplo@email.com"
+              autocomplete="email"
+              required
+            >
+          </div>
+
+          <div class="campo">
+            <label for="telefone">Telefone</label>
+            <input
+              type="tel"
+              id="telefone"
+              name="telefone"
+              placeholder="(00) 00000-0000"
+              autocomplete="tel"
+              maxlength="15"
+              required
+            >
+          </div>
+
+          <div class="campo">
+            <label for="senha">Senha</label>
+            <div class="campo-senha">
+              <input
+                type="password"
+                id="senha"
+                name="senha"
+                placeholder="Crie uma senha"
+                autocomplete="new-password"
+                minlength="8"
+                required
+              >
+              <button type="button" class="mostrar-senha"
+                data-alvo="senha">Mostrar</button>
+            </div>
+            <small>Use pelo menos 8 caracteres.</small>
+          </div>
+
+          <div class="campo">
+            <label for="confirmar-senha">Confirmar senha</label>
+            <div class="campo-senha">
+              <input
+                type="password"
+                id="confirmar-senha"
+                name="confirmar-senha"
+                placeholder="Digite sua senha novamente"
+                autocomplete="new-password"
+                required
+              >
+              <button type="button" class="mostrar-senha"
+                data-alvo="confirmar-senha">Mostrar</button>
+            </div>
+          </div>
+
+          <label class="termos">
+            <input type="checkbox" id="aceitar-termos" required>
+            <span>
+              Li e aceito os termos de uso e a política de privacidade.
+            </span>
+          </label>
+
+          <p id="mensagem-cadastro" class="mensagem-cadastro"
+            aria-live="polite"></p>
+
+          <button type="submit" class="botao-cadastrar-form">
+            CRIAR MINHA CONTA
+          </button>
+
+        </form>
+
+        <div class="divisor">
+          <span>OU</span>
+        </div>
+
+        <p class="texto-login">
+          Já possui uma conta?
+          <a href="login.html">Entrar agora</a>
+        </p>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="rodape">
+    <div class="rodape-logo">
+      <img src="Emblema Avengers Vermelho Escuro.png" alt="Logo A Shawarma">
+      <div>
+        <strong>A SHAWARMA</strong>
+        <p>Sabor de outro nível.</p>
+      </div>
+    </div>
+
+    <p>© 2026 A Shawarma. Todos os direitos reservados.</p>
+
+    <a href="index.html">Voltar ao início</a>
+  </footer>
+
+  <script src="cadastro.js"></script>
+</body>
+</html>

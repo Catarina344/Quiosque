@@ -1,0 +1,428 @@
+
+/* RESULTADOS DA BUSCA */
+
+.item-cardapio[hidden] {
+  display: none !important;
+}
+
+.mensagem-cardapio {
+  min-height: 20px;
+  margin: 20px 0;
+  color: #697586;
+  font-size: 12px;
+  text-align: center;
+}
+
+#campo-busca:focus {
+  outline: 2px solid #e50920;
+  outline-offset: 2px;
+}
+
+/* CAPA DO CARDÁPIO */
+
+.capa-cardapio {
+  min-height: 210px;
+  margin: 12px;
+  padding: 30px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  color: white;
+  background: linear-gradient(110deg, #101923, #3d0710);
+  border-radius: 10px;
+}
+
+.capa-texto {
+  position: relative;
+  z-index: 2;
+  max-width: 550px;
+}
+
+.capa-etiqueta {
+  color: #ff6977;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.capa-texto h1 {
+  margin: 10px 0;
+  font-family: 'Bebas Neue', Impact, sans-serif;
+  font-size: clamp(38px, 5vw, 58px);
+  line-height: .95;
+}
+
+.capa-texto h1 span {
+  display: block;
+  color: #ff253d;
+}
+
+.capa-texto p {
+  max-width: 380px;
+  color: #e1e4e8;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.capa-logo {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  opacity: .75;
+  filter: drop-shadow(0 4px 8px #0008);
+}
+
+/* CATEGORIAS */
+
+.categorias-cardapio {
+  padding: 18px 22px 25px;
+}
+
+.categorias-cardapio h2 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.lista-categorias {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.categoria {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 17px;
+  color: #343d49;
+  background: white;
+  border: 1px solid #e1e5eb;
+  border-radius: 25px;
+  font-size: 11px;
+  font-weight: 700;
+  transition: .2s;
+}
+
+.categoria span {
+  font-size: 16px;
+}
+
+.categoria:hover,
+.categoria.ativo {
+  color: white;
+  background: #e50920;
+  border-color: #e50920;
+}
+
+/* ÁREA DOS PRODUTOS */
+
+.area-cardapio {
+  padding: 10px 22px 30px;
+}
+
+.titulo-cardapio {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.subtitulo-cardapio {
+  color: #e50920;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.titulo-cardapio h2 {
+  margin-top: 5px;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.titulo-cardapio select {
+  padding: 10px 13px;
+  border: 1px solid #e1e5eb;
+  border-radius: 6px;
+  background: white;
+  color: #343d49;
+  font-size: 11px;
+  outline: none;
+}
+
+/* GRADE */
+
+.grade-cardapio {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 17px;
+}
+
+.item-cardapio {
+  min-width: 0;
+  background: white;
+  border: 1px solid #e1e5eb;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: .2s;
+}
+
+.item-cardapio:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px #10192315;
+}
+
+.item-cardapio[hidden] {
+  display: none;
+}
+
+.imagem-produto {
+  height: 165px;
+  position: relative;
+  overflow: hidden;
+  background: #eee;
+}
+
+.imagem-produto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .3s;
+}
+
+.item-cardapio:hover .imagem-produto img {
+  transform: scale(1.05);
+}
+
+.selo-produto {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 6px 9px;
+  color: white;
+  background: #e50920;
+  border-radius: 4px;
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.selo-diferente {
+  background: #101923;
+}
+
+.conteudo-cardapio {
+  padding: 14px;
+}
+
+.categoria-produto {
+  color: #e50920;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.conteudo-cardapio h3 {
+  margin: 8px 0;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.conteudo-cardapio p {
+  min-height: 36px;
+  color: #697586;
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+.preco-adicionar {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.preco-adicionar strong {
+  font-size: 15px;
+}
+
+.preco-adicionar .botao {
+  width: 100%;
+}
+
+/* MENSAGEM DE BUSCA */
+
+.mensagem-cardapio {
+  margin-top: 18px;
+  color: #697586;
+  font-size: 12px;
+  text-align: center;
+}
+
+/* CARRINHO */
+
+.carrinho-cardapio {
+  margin: 0 22px 30px;
+  padding: 22px;
+  background: white;
+  border: 1px solid #e1e5eb;
+  border-radius: 10px;
+}
+
+.titulo-carrinho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.titulo-carrinho h2 {
+  font-size: 19px;
+}
+
+.titulo-carrinho span {
+  color: #697586;
+  font-size: 11px;
+}
+
+.carrinho-vazio {
+  padding: 15px 0;
+  color: #697586;
+  font-size: 12px;
+}
+
+.item-carrinho {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 15px;
+  padding: 13px 0;
+  border-bottom: 1px solid #e5e8ed;
+}
+
+.item-carrinho p {
+  margin-top: 5px;
+  color: #697586;
+}
+
+.quantidade {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.quantidade button,
+.remover-item {
+  padding: 5px 9px;
+  background: white;
+  border: 1px solid #e1e5eb;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.remover-item {
+  display: block;
+  margin-top: 6px;
+  color: #e50920;
+}
+
+.rodape-carrinho {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.rodape-carrinho strong {
+  font-size: 17px;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 1000px) {
+  .grade-cardapio {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 750px) {
+  .grade-cardapio {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .capa-cardapio {
+    padding: 25px;
+  }
+
+  .capa-logo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .categorias-cardapio,
+  .area-cardapio {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .grade-cardapio {
+    grid-template-columns: 1fr;
+  }
+
+  .imagem-produto {
+    height: 210px;
+  }
+
+  .capa-cardapio {
+    min-height: 190px;
+    padding: 22px 18px;
+  }
+
+  .capa-texto h1 {
+    font-size: 42px;
+  }
+
+  .capa-logo {
+    width: 65px;
+    height: 65px;
+  }
+
+  .titulo-cardapio {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .titulo-cardapio select {
+    width: 100%;
+  }
+
+  .lista-categorias {
+    gap: 7px;
+  }
+
+  .categoria {
+    padding: 9px 12px;
+  }
+
+  .carrinho-cardapio {
+    margin-left: 12px;
+    margin-right: 12px;
+    padding: 15px;
+  }
+
+  .item-carrinho {
+    grid-template-columns: 1fr auto;
+  }
+
+  .rodape-carrinho {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}
